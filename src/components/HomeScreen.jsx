@@ -45,7 +45,6 @@ export default class HomeScreen extends Component {
   getToDo = async() =>{
     let data = await api.get('toDos')
     this.setState({toDos:data.data})
-    console.log(data.data,'-------')
   }
 
 
@@ -75,7 +74,6 @@ export default class HomeScreen extends Component {
 
 
   render() {
-    console.log(this.state.toDos,'yo to do ho')
     return (
       <div className="to-do">
 
@@ -88,7 +86,6 @@ export default class HomeScreen extends Component {
           deleteItem ={this.deleteItem}
           // editItem={this.editItem}
         />
-        {/* <Try /> */}
       </div>
     )
   }

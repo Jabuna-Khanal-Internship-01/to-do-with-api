@@ -17,7 +17,6 @@ export default class Header extends Component {
     };
   }
 
-
   handleChange = (event) => {
     this.setState({ value: event.target.value });
   }
@@ -32,9 +31,7 @@ export default class Header extends Component {
     this.setState({ toDos: [...this.state.toDos, this.state.value],value:''}, () => {
     this.props.handleAddItem(this.state.toDos)
   });
-
   }
-
 
 
   render() {

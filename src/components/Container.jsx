@@ -16,14 +16,12 @@ export default class Container extends Component {
 
   handleChange = (event) => {
     this.setState({ value: event.target.value });
-    console.log(this.props);
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({ editedValue: this.state.value, value: '' }, () => {
     });
-    console.log(this.state.value);
   }
 
   renderTodo = (item) => {
